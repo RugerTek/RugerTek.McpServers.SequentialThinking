@@ -3,7 +3,7 @@ using Core.Models;
 
 namespace Core;
 
-public sealed class SequentialThinkingServer(int totalThoughts)
+public sealed class SequentialThinkingServer()
 {
     private readonly List<ThoughtData> _thoughtHistory = [];
     private readonly ConcurrentDictionary<string, List<ThoughtData>> _branches = [];
@@ -39,6 +39,7 @@ public sealed class SequentialThinkingServer(int totalThoughts)
         // Return the result
         return new ProcessThoughtResponse
         {
+            Thought = formattedThought,
             ThoughtNumber = validatedInput.ThoughtNumber,
             TotalThoughts = validatedInput.TotalThoughts,
             NextThoughtNeeded = validatedInput.NextThoughtNeeded,

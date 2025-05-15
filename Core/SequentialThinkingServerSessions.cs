@@ -9,7 +9,7 @@ public sealed class SequentialThinkingServerSessions
     public SequentialThinkingServer GetSession(string sessionId)
     {
         // concurrently get the session for the id
-        return Sessions.GetOrAdd(sessionId, _ => new SequentialThinkingServer(10));
+        return Sessions.GetOrAdd(sessionId, _ => new SequentialThinkingServer());
     }
     
     public void RemoveSession(string sessionId)

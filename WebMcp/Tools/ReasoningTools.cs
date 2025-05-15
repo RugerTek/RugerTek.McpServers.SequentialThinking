@@ -69,7 +69,7 @@ public sealed class ReasoningTools
         10. Provide a single, ideally correct answer as the final output
         11. Only set next_thought_needed to false when truly done and a satisfactory answer is reached
         """)]
-    public static Task<Content> ProcessThought([FromServices] SequentialThinkingServerSessions sessions, string sessionId, [Required] ProcessThoughtRequest request)
+    public static Task<Content> ProcessThought([FromServices] SequentialThinkingServerSessions sessions, [Required] string sessionId, [Required] ProcessThoughtRequest request)
     {
         try
         {
@@ -78,7 +78,7 @@ public sealed class ReasoningTools
             return Task.FromResult(new Content
             {
                 Type = "text",
-                Text = JsonSerializer.Serialize(result)
+                Text = JsonSerializer.Serialize(result, JsonSerializerOptions.Web)
             });
         }
         catch (Exception)
