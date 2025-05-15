@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RugerTek.McpServers.SequentialThinking", "RugerTek.McpServers.SequentialThinking\RugerTek.McpServers.SequentialThinking.csproj", "{0E7F4437-3CD0-4906-8C5D-70D35458774E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMcp", "WebMcp\WebMcp.csproj", "{0E7F4437-3CD0-4906-8C5D-70D35458774E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C373ED12-7ADB-4E2E-9C37-97C85DFFF606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{0E7F4437-3CD0-4906-8C5D-70D35458774E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7F4437-3CD0-4906-8C5D-70D35458774E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7F4437-3CD0-4906-8C5D-70D35458774E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C373ED12-7ADB-4E2E-9C37-97C85DFFF606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C373ED12-7ADB-4E2E-9C37-97C85DFFF606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C373ED12-7ADB-4E2E-9C37-97C85DFFF606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C373ED12-7ADB-4E2E-9C37-97C85DFFF606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
