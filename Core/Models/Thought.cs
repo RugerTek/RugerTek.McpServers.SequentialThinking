@@ -1,21 +1,14 @@
 namespace Core.Models;
 
-public sealed class Thought
+public sealed class ThoughtData
 {
-    public string Content { get; set; }
-    public int Index { get; set; }
+    public string Thought { get; set; } = string.Empty;
+    public int ThoughtNumber { get; set; }
     public int TotalThoughts { get; set; }
-    public List<string> History { get; set; }
-    public bool IsValid { get; set; }
-    public string Branch { get; set; }
-
-    public Thought(string content, int index, int totalThoughts)
-    {
-        Content = content;
-        Index = index;
-        TotalThoughts = totalThoughts;
-        History = new List<string>();
-        IsValid = true;
-        Branch = string.Empty;
-    }
+    public bool NextThoughtNeeded { get; set; }
+    public bool? IsRevision { get; set; }
+    public int? RevisesThought { get; set; }
+    public int? BranchFromThought { get; set; }
+    public string BranchId { get; set; } = string.Empty;
+    public bool? NeedsMoreThoughts { get; set; }
 }
